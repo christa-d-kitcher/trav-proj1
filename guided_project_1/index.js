@@ -4,6 +4,7 @@ const charactersList = document.querySelector("#charactersList")
 
 document.addEventListener('DOMContentLoaded', getCharacters)
 
+
 async function getCharacters() {
   let url = 'http://localhost:9001/api/characters';
 
