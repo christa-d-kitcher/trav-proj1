@@ -61,4 +61,7 @@ const renderCharacter = character => {
   homeworldSpan.innerHTML = `<a href="/planet.html?id=${character?.homeworld.id}">${character?.homeworld.name}</a>`;
   const filmsLis = character?.films?.map(film => `<li><a href="/film.html?id=${film.id}">${film.title}</li>`)
   filmsUl.innerHTML = filmsLis.join("");
+  filmsUl.addEventListener('click', () => goToFilmsPage(character.id));
 }
+
+const goToFilmsPage = id => window.location = `/film.html?id=${id}`
